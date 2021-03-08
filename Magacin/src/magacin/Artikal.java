@@ -1,4 +1,4 @@
-package artikal;
+package magacin;
 
 public class Artikal {
 
@@ -47,10 +47,6 @@ public class Artikal {
 		this.kolicina = kolicina;
 	}
 
-	@Override
-	public String toString() {
-		return "Artikal [sifra=" + sifra + ", naziv=" + naziv + ", opis=" + opis + ", kolicina=" + kolicina + "]";
-	}
 	
 	
 	
