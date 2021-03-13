@@ -20,6 +20,8 @@ public class Artikal {
 	}
 
 	public void setSifra(int sifra) {
+		if (sifra < 0)
+			throw new RuntimeException("Sifra ne moze biti negativan broj.");
 		this.sifra = sifra;
 	}
 
@@ -28,6 +30,9 @@ public class Artikal {
 	}
 
 	public void setNaziv(String naziv) {
+		if (naziv.isEmpty())
+			throw new RuntimeException("Unesite naziv");
+		
 		this.naziv = naziv;
 	}
 
@@ -36,6 +41,8 @@ public class Artikal {
 	}
 
 	public void setOpis(String opis) {
+		if (opis.isEmpty())
+			throw new RuntimeException("Unesite opis");
 		this.opis = opis;
 	}
 
@@ -44,6 +51,8 @@ public class Artikal {
 	}
 
 	public void setKolicina(int kolicina) {
+		if (kolicina < 0)
+			throw new RuntimeException("Unesite ispravnu kolicinu. Broj koji ste uneli je negativan.");
 		this.kolicina = kolicina;
 	}
 
