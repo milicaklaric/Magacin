@@ -7,5 +7,12 @@ public class Knjiga extends Artikal {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "Knjiga [getSifra()=" + getSifra() + ", getNaziv()=" + getNaziv() + ", getOpis()=" + getOpis()
+				+ ", getKolicina()=" + getKolicina() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ ", getClass()=" + getClass() + "]";
+	}
+
 
 }
