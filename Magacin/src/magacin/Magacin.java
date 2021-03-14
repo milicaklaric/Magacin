@@ -9,28 +9,35 @@ public class Magacin implements MagacinInterface {
 
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		boolean postoji = false;
-		for (Artikal a : artikli) {
-			if(a.equals(artikal)) {
-				postoji = true;
-				a.setKolicina(a.getKolicina()+artikal.getKolicina());
+		if (artikli.contains(artikal)) {
+			for (Artikal a : artikli) {
+				if(a.equals(artikal)) {
+					a.setKolicina(a.getKolicina()+artikal.getKolicina());
+				}
 			}
-		}
-		
-		if (!postoji)
+		}else {
 			artikli.add(artikal);
+		}
 	}
 
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
-
+		for (Artikal a : artikli) {
+			if (a.equals(artikal)) {
+				a.setKolicina(a.getKolicina() - artikal.getKolicina());
+			}
+		}
 	}
 
 	@Override
 	public Artikal pronadjiArtikal(int sifra) {
-		// TODO Auto-generated method stub
-		return null;
+		Artikal a = null;
+		for (Artikal artikal : artikli) {
+			if (artikal.getSifra()==sifra) {
+				a = artikal;
+			}
+		}
+		return a;
 	}
 
 }
